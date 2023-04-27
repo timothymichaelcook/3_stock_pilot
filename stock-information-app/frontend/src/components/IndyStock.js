@@ -1,18 +1,44 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import '../styles/Globalstyles.css';
 
-function IndyStock (){
+const CompanyInfoTable = ({tickerSymbol}) => {
+  const [companyInfo, setCompanyInfo] = useState({});
 
-  return(
-<div className="card">
-  <div className="card-content">
-    <div className="content">
-      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-    </div>
-  </div>
-</div>
+  useEffect(() => {
+    const fetchCompanyInfo = async () => {
+      const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockSymbol}&apikey=${apiKey}`);
+      const info = await response.json();
+      setCompanyInfo(info);
+    };
+    fetchCompanyInfo();
+  }, [tickerSymbol]);
+
+  return (
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Exchange</th>
+          <th>Sector</th>
+          <th>Industry</th>
+          <th>Dividend/Share</th>
+          <th>EPS</th>
+          <th>52 Week High</th>
+          <th>52 Week Low</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{companyInfo.Exchange}</td>
+          <td>{companyInfo.Sector}</td>
+          <td>{companyInfo.Industry}</td>
+          <td>{companyInfo.DividendPerShare}</td>
+          <td>{companyInfo.EPS}</td>
+          <td>{companyInfo['52WeekHigh']}</td>
+          <td>{companyInfo['52WeekLow']}</td>
+        </tr>
+      </tbody>
+    </table>
   );
-}
+};
 
-export default IndyStock;
+export default CompanyInfoTable;
