@@ -1,0 +1,56 @@
+.crawler {
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 55px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: #aacef4;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100% +20px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tidbits{
+  display: flex;
+  position: absolute;
+  animation: scroll 300s linear infinite;
+  align-items: center;
+}
+
+.tidbit {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  margin-right: 20px;
+  background-color: #3f4046;
+  /* border-radius: 20px; */
+  padding: 10px;
+  font-size: small;
+  white-space: normal;
+}
+
+.tidbitDetail{
+  font-weight: bold;
+  word-wrap: break-word; 
+  max-width: 100%; 
+  padding: 2px;
+}
+.tidbit a {
+  color: #1784f9;
+  text-decoration: none;
+}
+
+.tidbit a:hover {
+  text-decoration: underline;
+  color:chartreuse;
+}
