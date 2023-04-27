@@ -1,6 +1,6 @@
 {
-  "name": "20th-challenge",
-  "homepage": "https://andrewmlittlejohn.github.io/ReactPageforChallenge20/",
+"name": "Project_3_StockPilot",
+  "homepage": "https://github.com/timothymichaelcook/3_stock_pilot/pull/6/conflicts/",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,6 @@
     "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
-    "puppeteer": "^19.11.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-router-dom": "^6.10.0",
