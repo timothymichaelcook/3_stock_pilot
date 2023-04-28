@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     user: String
     email: String
-    stocks: [String]!
+    stocks: [Stock!]
   }
 
   # Set up an Auth type to handle returning data from a profile creating or user login

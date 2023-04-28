@@ -6,7 +6,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import "./symbolSearch.css";
+import '../styles/Globalstyles.css';
 
 const ALPHA_VANTAGE_API_KEY = "5JB6VTZK12BKB1D7";
 
@@ -115,34 +115,34 @@ export default SymbolSearch;
 //add this code inside the index.html  
 //The main HTML file that includes a container for your REACT application.
 
-;;`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stock Symbol Search</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
-<body>
-  <div id="root"></div>
-  <script src="./index.js"></script>
-</body>
-</html>
-`//add this code inside a css file.
+// ;;`<!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>Stock Symbol Search</title>
+//   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+// </head>
+// <body>
+//   <div id="root"></div>
+//   <script src="./index.js"></script>
+// </body>
+// // </html>
+// `//add this code inside a css file.
 
-`.SymbolSearch {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-}`
+// // `.SymbolSearch {
+//   width: 100%;
+//   max-width: 600px;
+//   margin: 0 auto;
+//   padding: 20px;
+//   box-sizing: border-box;
+//   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+// }`
 
 //add this code to the index.js file.
 
-`import SymbolSearch from './components/symbolSearch';
-`
+// `import SymbolSearch from './components/symbolSearch';
+// `
 
 
 

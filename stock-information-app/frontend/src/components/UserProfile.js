@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
 import { User_Profile } from '../utils/mutations';
-import { QUERY_PROFILES } from '../utils/queries';
+import { Stock_Search } from '../utils/queries';
 
 const UserProfile = () => {
   const [name, setName] = useState('');
@@ -10,10 +10,10 @@ const UserProfile = () => {
   const [addUserProfile, { error }] = useMutation(User_Profile, {
     update(cache, { data: { UserProfile } }) {
       try {
-        const { profiles } = cache.readQuery({ query: QUERY_PROFILES });
+        const { profiles } = cache.readQuery({ query: Stock_Search });
 
         cache.writeQuery({
-          query: QUERY_PROFILES,
+          query: Stock_Search,
           data: { profiles: [...profiles, UserProfile] },
         });
       } catch (e) {
