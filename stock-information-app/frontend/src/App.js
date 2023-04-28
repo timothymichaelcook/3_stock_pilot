@@ -15,6 +15,9 @@ import StockSearch from "./components/StockSearch";
 
 import "bulma/css/bulma.min.css";
 
+import { ALPHA_VANTAGE_API_KEY } from "./symbolSearch.js";
+
+
 function App() {
   return (
     <div className="App">
