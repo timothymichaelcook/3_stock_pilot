@@ -6,8 +6,11 @@ const CompanyInfoTable = ({tickerSymbol}) => {
 
   useEffect(() => {
     const fetchCompanyInfo = async () => {
-      const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockSymbol}&apikey=${apiKey}`);
+      // const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockSymbol}&apikey=${apiKey}`);
+      // const info = await response.json();
+      const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=5JB6VTZK12BKB1D7`);
       const info = await response.json();
+
       setCompanyInfo(info);
     };
     fetchCompanyInfo();
