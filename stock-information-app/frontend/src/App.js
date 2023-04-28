@@ -11,11 +11,12 @@ import SignUp from "./components/SignUp";
 import Navbar from "./components/Navbar";
 import UserPortfolio from "./components/UserPortfolio";
 import UserProfile from "./components/UserProfile";
-import StockSearch from "./components/StockSearch";
+// import StockSearch from "./components/StockSearch";
+import SymbolSearch from "./components/symbolSearch";
 
 import "bulma/css/bulma.min.css";
 
-import { ALPHA_VANTAGE_API_KEY } from "./symbolSearch.js";
+// import { ALPHA_VANTAGE_API_KEY } from "./symbolSearch.js";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/portfolio" element={<UserPortfolio />} />
             <Route path="/profile" element={<UserProfile />} />
-            <Route path="/search" element={<StockSearch />} />
+            <Route path="/search" element={<SymbolSearch />} />
           </Routes>
         </main>
         <footer>
