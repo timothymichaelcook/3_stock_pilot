@@ -115,7 +115,7 @@ export default SymbolSearch;
 //add this code inside the index.html  
 //The main HTML file that includes a container for your REACT application.
 
-;;`<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
