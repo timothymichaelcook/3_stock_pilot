@@ -1,28 +1,23 @@
 import { gql } from '@apollo/client';
 
-
 export const User_Profile = gql`
-mutation UserProfile($name: String!) {
-  UserProfile(name: $name) {
-      _id
-      username
-      high
-      low
+  mutation addUser($email: String!, $password: String!) {
+    addUser(email: $email, password: $password) {
+       User
+       profile {
+         _id
+         email
+       }
+    }
+  }`;
 
+export const LOGIN = gql`
+  mutation Login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    user
+    profile {
+      _id
+      email
     }
   }
-`;
-
-export const User_Portfolio = gql`
-mutation UserPortfolio($name: String!) {
-  UserPortfolio(name: $name) {
-      _id
-      username
-      open
-      high
-      low
-      close
-      volume  
-    }
-  }
-`;
+}`;

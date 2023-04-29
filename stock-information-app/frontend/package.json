@@ -2,8 +2,6 @@
 
   "name": "Project_3_StockPilot",
 
-  "homepage": "https://github.com/timothymichaelcook/3_stock_pilot/pull/6/conflicts/",
-
   "version": "1.0.0",
 
   "private": true,
@@ -25,6 +23,8 @@
     "bulma": "^0.9.4",
 
     "dotenv": "^16.0.3",
+
+    "jsonwebtoken": "^9.0.0",
 
     "puppeteer": "^19.11.0",
 
