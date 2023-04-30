@@ -4,9 +4,10 @@
 
 //This code goes inside components/symbolSearch.js file:
 
-import React, { useState, useEffect, useRef } from "react"
-import axios from "axios"
-import "bulma/css/bulma.css"
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+import "bulma/css/bulma.css";
+import "../styles/GlobalStyles.css"
 
 // Replace this key with your own Alpha Vantage API key
 const ALPHA_VANTAGE_API_KEY = "5JB6VTZK12BKB1D7"
@@ -94,35 +95,34 @@ function SymbolSearch() {
   }
 
   return (
-    <div className="App">
-      <div className="field">
-        <div className={`control ${isLoading ? "is-loading" : ""}`}>
-          <input
-            className="input"
-            type="text"
-            ref={inputRef}
-            placeholder="Search stock symbol"
-            value={searchTerm}
-            onChange={handleInputChange}
-          />
-        </div>
-      </div>
-      {error && <div className="notification is-danger">{error}</div>}
-      <div className="panel">
-        {searchResults.map((result) => (
-          <a
-            className="panel-block"
-            key={result.symbol}
-            onClick={() => handleResultClick(result)}
-          >
-            {result.symbol} - {result.name}
-          </a>
-        ))}
+  <div className="App search-container">
+    <div className="field">
+      <div className={`control ${isLoading ? "is-loading" : ""}`}>
+        <input
+          className="input"
+          type="text"
+          ref={inputRef}
+          placeholder="Search stock symbol"
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
       </div>
     </div>
-  )
+    {error && <div className="notification is-danger">{error}</div>}
+    <div className="panel">
+      {searchResults.map((result) => (
+        <a
+          className="panel-block"
+          key={result.symbol}
+          onClick={() => handleResultClick(result)}
+        >
+          {result.symbol} - {result.name}
+        </a>
+      ))}
+    </div>
+  </div>
+);
 }
-
 export default SymbolSearch;
 
 
@@ -130,34 +130,12 @@ export default SymbolSearch;
 //add this code inside the index.html  
 //The main HTML file that includes a container for your REACT application.
 
-//`<!DOCTYPE html>
-//<html lang="en">
-
-//<head>
- // <meta charset="UTF-8">
- // <meta name="viewport" content="width=device-width, initial-scale=1.0">
- // <title>Stock Symbol Search</title>
- // <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
- // <link rel="stylesheet" href="./styles.css">
-//</head>
+//`
 //<body>
  // <div id="root" class="search-container"></div>
  // <script src="./index.js"></script>
 //</body>
 //</html> `
-
-
-//add this code inside a css file.
-
- // `body, html {
-  //height: 100%;
-//}
-//.search-container {
-//  display: flex;
- // justify-content: center;
-  //align-items: center;
- // height: 100%;
-//}`
 
 
 //add this code to the index.js file.
@@ -188,10 +166,4 @@ export default SymbolSearch;
 //}
 
 //export default App
-
-
-
-
-
-
 
