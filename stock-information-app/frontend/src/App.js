@@ -15,6 +15,7 @@ import UserProfile from "./components/UserProfile";
 import SymbolSearch from "./components/symbolSearch";
 
 import "bulma/css/bulma.min.css";
+import "./styles/GlobalStyles.css";//added, Peggy
 
 // import { ALPHA_VANTAGE_API_KEY } from "./symbolSearch.js";
 
