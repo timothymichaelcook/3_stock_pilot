@@ -15,37 +15,37 @@ return (
         <span className="panel-icon">
           <i className="fas fa-book" aria-hidden="true"></i>
         </span>
-        bulma
+        Federal regulators race to seize and sell First Republic Bank
       </a>
       <a className="panel-block">
         <span className="panel-icon">
           <i className="fas fa-book" aria-hidden="true"></i>
         </span>
-        marksheet
+        Here Are The Best Sector ETFs And Major Sector-Moving Stocks In April
       </a>
       <a className="panel-block">
         <span className="panel-icon">
           <i className="fas fa-book" aria-hidden="true"></i>
         </span>
-        <span class="is-size-6">minireset.css</span>
+        <span className="is-size-6">Rosemary Beach rentals with pools</span>
       </a>
       <a className="panel-block">
         <span className="panel-icon">
           <i className="fas fa-book" aria-hidden="true"></i>
         </span>
-        jgthms.github.io
+Before Buying Devon Energy, Check Out This Higher-Growth Oil Stock
       </a>
       <a className="panel-block">
         <span className="panel-icon">
           <i className="fas fa-code-branch" aria-hidden="true"></i>
         </span>
-        daniellowtw/infboard
+        10 stocks we like better than Devon Energy
       </a>
       <a className="panel-block">
         <span className="panel-icon">
           <i className="fas fa-code-branch" aria-hidden="true"></i>
         </span>
-        mojs
+        Rosemary Beach rentals with pools
       </a>
     </div>
   </div>

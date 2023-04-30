@@ -28,6 +28,7 @@ function SymbolSearch() {
 
   const handleInputChange = (event) => {
     const query = event.target.value
+    console.log(query)
     setSearchTerm(query)
 
     if (searchTimeout) {
@@ -37,7 +38,9 @@ function SymbolSearch() {
     if (query.length > 0) {
       setSearchTimeout(
         setTimeout(() => {
+      
           searchSymbols(query)
+          console.log(searchSymbols (query))
         }, 300)
       )
     } else {
@@ -55,7 +58,12 @@ function SymbolSearch() {
       const response = await axios.get(
         `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apikey=${ALPHA_VANTAGE_API_KEY}`
       )
+      for (let i = 0; i < response.data.bestMatches.length; i++) {
+        const element = response.data.bestMatches[i];
+        console.log(element)
 
+      } 
+       console.log(response.data.bestMatches)
       if (response.data.Note) {
         setError("API rate limit exceeded. Please try again later.");
       } else if (response.data.bestMatches) {

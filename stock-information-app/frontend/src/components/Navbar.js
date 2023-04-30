@@ -32,10 +32,9 @@ function Navbar() {
       <div id="navbarBasicExample" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">
           <Link to="/" className="navbar-item">Home</Link>
-
+          <Link to="/search" className="navbar-item">Search</Link>
           {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
-
             <div className="navbar-dropdown">
               <a className="navbar-item">About</a>
               <a className="navbar-item">Login</a>
