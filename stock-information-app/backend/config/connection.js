@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
 
-// Wrap Mongoose around local connection to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/stock_pilot', {
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/stock_pilot';
+
+mongoose.connect(MONGO_URI,  {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-// Export connection
+mongoose.connection.on('error', (error) =>  {
+console.error('Error connecting to MongoDB:', error);
+});
+
 module.exports = mongoose.connection;
